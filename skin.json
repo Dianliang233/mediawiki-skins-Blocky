@@ -1,0 +1,73 @@
+{
+	"name": "Blocky",
+	"version": "1.0.0",
+	"author": ["..."],
+	"url": "https://www.mediawiki.org/wiki/Skin:Blocky",
+	"descriptionmsg": "blocky-skin-desc",
+	"namemsg": "skinname-blocky",
+	"license-name": "CC0-1.0",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"ValidSkinNames": {
+		"blocky": {
+			"class": "SkinMustache",
+			"args": [
+				{
+					"name": "blocky",
+					"responsive": true,
+					"messages": [
+						"blocky-no-categories",
+						"sitetitle",
+						"search",
+						"otherlanguages",
+						"tagline",
+						"navigation-heading"
+					],
+					"styles": [
+						"mediawiki.ui.icon",
+						"mediawiki.ui.button",
+						"skins.blocky.styles"
+					],
+					"scripts": ["skins.blocky"]
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"Blocky": ["i18n"]
+	},
+	"ResourceModules": {
+		"skins.blocky.styles": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {
+				"normalize": true,
+				"elements": true,
+				"content-tables": true,
+				"content-links": false,
+				"content-media": false,
+				"content-links-external": false,
+				"interface-message-box": true,
+				"interface-category": false,
+				"toc": true
+			},
+			"targets": ["desktop", "mobile"],
+			"styles": ["resources/skin.less"]
+		},
+		"skins.blocky": {
+			"targets": ["desktop", "mobile"],
+			"packageFiles": ["resources/skin.js"]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Blocky"
+	},
+	"ResourceModuleSkinStyles": {
+		"blocky": {
+			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
+		}
+	},
+	"manifest_version": 2
+}
