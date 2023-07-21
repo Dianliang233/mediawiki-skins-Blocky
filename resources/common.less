@@ -1,12 +1,15 @@
-@media screen {
-	@import './screen-common.less';
+@import 'variables.less';
+@import 'content.less';
 
-	@media ( min-width: 751px ) {
-		@import './screen-desktop.less';
+@media screen {
+	@import './screen/common.less';
+
+	@media ( min-width: @min-width-breakpoint-desktop ) {
+		@import './screen/desktop.less';
 	}
 
-	@media ( min-width: 750px ) {
-		@import './screen-mobile.less';
+	@media ( min-width: @min-width-breakpoint-mobile ) {
+		@import './screen/mobile.less';
 	}
 }
 

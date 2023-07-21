@@ -38,18 +38,28 @@
 	"MessagesDirs": {
 		"Blocky": ["i18n"]
 	},
+	"SkinLessImportPaths": {
+		"blocky": "resources/mediawiki.less"
+	},
 	"ResourceModules": {
 		"skins.blocky.styles": {
 			"class": "ResourceLoaderSkinModule",
 			"features": {
 				"normalize": true,
 				"elements": true,
+				"content-media": true,
 				"content-tables": true,
-				"content-links": false,
-				"content-media": false,
-				"content-links-external": false,
+				"interface-core": true,
+				"interface-category": true,
+				"interface-edit-section-links": true,
+				"interface-indicators": false,
 				"interface-message-box": true,
-				"interface-category": false,
+				"interface-site-notice": true,
+				"interface-subtitle": false,
+				"interface-user-message": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true,
 				"toc": true
 			},
 			"targets": ["desktop", "mobile"],
